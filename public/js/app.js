@@ -5,6 +5,7 @@ const documentTwo = document.querySelector('#message-2')
 
 weatherForm.addEventListener('submit', (event) => {
     event.preventDefault()
+    
     const location = search.value
 
     const url = `http://localhost:2020/weather?address=${encodeURIComponent(location)}`
