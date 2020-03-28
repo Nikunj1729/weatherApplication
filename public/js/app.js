@@ -8,7 +8,7 @@ weatherForm.addEventListener('submit', (event) => {
     
     const location = search.value
 
-    const url = `http://localhost:2020/weather?address=${encodeURIComponent(location)}`
+    const url = `/weather?address=${encodeURIComponent(location)}`
     documentOne.textContent = 'Loading...'
     documentTwo.textContent = ''
 

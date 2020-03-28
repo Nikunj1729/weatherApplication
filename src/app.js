@@ -6,6 +6,7 @@ const getGeoCode = require('./utils/getGeoCode')
 const getWeatherForecast = require('./utils/getWeather')
 
 const app = express()
+const port = process.env.PORT || 2020;
 
 const publicDirPath = path.join(__dirname, '../public')
 const viewsDirPath = path.join(__dirname, '../templates/views')
@@ -74,6 +75,6 @@ app.get('*', (req, res) => {
     res.render('404', {title: '404',errorMessage: 'Page not found' , name: 'Nikunj'})
 })
 
-app.listen(2020, () => {
+app.listen(port, () => {
     console.log('Server is running')
 })
