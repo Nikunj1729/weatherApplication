@@ -14,7 +14,7 @@ const getWeatherForecast = ({lat, long}, callback) => {
         const summary = response.data.daily.data[0].summary;
         const temperatureLow = response.data.daily.data[0].temperatureLow;
         const temperatureHigh = response.data.daily.data[0].temperatureHigh;
-        const weatherPrediction = `${summary} It is currently ${currentData.temperature} degrees out. There is a ${currentData.precipProbability}% chance of rain. Temperature high is ${temperatureLow} and temperature low ${temperatureHigh}`;
+        const weatherPrediction = `${summary} It is currently ${currentData.temperature} degrees out. There is a ${currentData.precipProbability}% chance of rain. Temperature high is ${temperatureLow} and temperature low is ${temperatureHigh}`;
         callback(null, weatherPrediction)
     })
     .catch((error) => {
